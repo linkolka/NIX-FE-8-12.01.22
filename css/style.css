@@ -40,6 +40,19 @@ body {
   line-height: 120%;
   font-weight: normal;
   color: #016b2b;
+  background: linear-gradient(to right top, rgba(255, 0, 0, 0.6) 50%, #e8e8e8 50%);
+  background-size: 100% calc(100% - 100vh + 65px);
+  background-repeat: no-repeat;
+}
+
+body::before {
+  position: fixed;
+  content: '';
+  width: 100%;
+  top: 65px;
+  bottom: 0;
+  background-color: #fff;
+  z-index: -1;
 }
 
 .visually-hidden {
@@ -100,7 +113,7 @@ body {
 /* header */
 .header {
   width: 100%;
-  min-height: 40px;
+  height: 50px;
   position: fixed;
   padding: 5px;
   top: 0;
@@ -156,15 +169,6 @@ body {
   transform: translateY(-40px);
 }
 
-.progress-bar {
-  /* position: fixed; */
-  bottom: 0;
-  transform: translateY(-50%);
-  height: 5px;
-  width: 0%;
-  background-color: rgba(255, 255, 255, 0.9);
-  
-}
 
 .main {
   margin-top: 100px;
@@ -179,20 +183,27 @@ body {
 .slider {
   position: relative;
   margin: 0 auto;
-  width: 1190px;
+  padding: 20px;
+  width: 1240px;
+  height: auto;
+  background-color: rgb(1, 107, 43);
+  box-sizing: border-box;
 }
+
 .slider input[type=radio] {
   display: none;
 }
 
 .slider-inner {
   overflow: hidden;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .slider-slides {
   width: 500%;
   transition: transform 0.8s ease;
-  padding: 20px;
+  
 }
 
 .slider-slides img {
@@ -200,11 +211,97 @@ body {
   width: 370px;
   height: 342px;
   margin-right: 20px;
-  box-shadow:  0 0 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow:  0 -5px 4px 4px rgba(0, 0, 0, 0.5);
   opacity: 0.9;
 }
 
-.slider-controls {
+/* Arrows */
+
+.slider-control {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 55;
+}
+
+.slider-control label {
+  display: none;
+  z-index: 0;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 5px solid #fff;
+  border-left: none;
+  border-bottom: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.arrow--next {
+  transform: rotate(45deg);
+}
+
+.arrow--previous {
+  transform: rotate(-135deg);
+}
+
+.slider-control .arrow:hover {
+  opacity: 1;
+}
+
+.next {
+  right: 1%;
+}
+
+.previous {
+  left: 1%;
+}
+
+.slider-pagination {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.slider-pagination label {
+  width: 30px;
+  height: 10px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 20%;
+  background: rgba(1, 107, 43, 0.5);
+  /* border: solid 2px rgba(1, 107, 43, 0.9); */
+  cursor: pointer;
+}
+
+/* Slider arrow effect */
+
+.slide-radio1:checked~.next .numb2,
+.slide-radio2:checked~.next .numb3,
+.slide-radio2:checked~.previous .numb1,
+.slide-radio3:checked~.previous .numb2 {
+  display: block;
+  z-index: 1;
+}
+
+/* Slider pagination effect */
+
+.slide-radio1:checked~.slider-pagination .page1,
+.slide-radio2:checked~.slider-pagination .page2,
+.slide-radio3:checked~.slider-pagination .page3 {
+  background: rgba(1, 107, 43, 0.9);
+}
+
+/* .slider-controls {
   margin-bottom: 10px;
   text-align: center;
 }
@@ -220,7 +317,7 @@ body {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   cursor: pointer;
   transition: background-color 0.2s;
-}
+} */
 
 #btn-1:checked~.slider-controls label[for=btn-1],
 #btn-2:checked~.slider-controls label[for=btn-2],

@@ -38,7 +38,7 @@
           </li>
         </ul>
       </nav>
-      <div class="progress-bar" id="progressBar"></div>
+
     </div>
   </header>
   <main class="main container">
@@ -48,14 +48,24 @@
       <div class="works__container">
 
         <div class="slider">
-          <input type="radio" id="btn-1" name="toggle" checked>
-          <input type="radio" id="btn-2" name="toggle">
-          <input type="radio" id="btn-3" name="toggle">
+          <input class="slide-radio1" type="radio" id="btn-1" name="toggle" checked>
+          <input class="slide-radio2" type="radio" id="btn-2" name="toggle">
+          <input class="slide-radio3" type="radio" id="btn-3" name="toggle">
 
-          <div class="slider-controls">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-            <label for="btn-3"></label>
+          <div class="slider-pagination">
+            <label class="page1" for="btn-1"></label>
+            <label class="page2" for="btn-2"></label>
+            <label class="page3" for="btn-3"></label>
+          </div>
+          <div class="slider-control next">
+            <label class="numb1" for="btn-1"></label>
+            <label class="numb2" for="btn-2"><span class="arrow arrow--next"></span></label>
+            <label class="numb3" for="btn-3"><span class="arrow arrow--next"></span></label>
+          </div>
+          <div class="slider-control previous">
+            <label class="numb1" for="btn-1"><span class="arrow arrow--previous"></span></label>
+            <label class="numb2" for="btn-2"><span class="arrow arrow--previous"></span></label>
+            <label class="numb3" for="btn-3"></label>
           </div>
           <div class="slider-inner">
             <div class="slider-slides">
@@ -364,7 +374,7 @@
       <p class="footer__copy">&copy;2022 linkolka@com</p>
     </div>
   </footer>
-  <script src="js/scrolling.js"></script>
+
 </body>
 
 </html>

@@ -169,10 +169,10 @@ body::before {
   transform: translateY(-40px);
 }
 
-
 .main {
   margin-top: 100px;
 }
+
 /* slider */
 
 .works {
@@ -194,19 +194,18 @@ body::before {
   display: none;
 }
 
-.slider-inner {
+.slider__wrapper {
   overflow: hidden;
   width: 1160px;
   margin: 0 auto;
 }
 
-.slider-slides {
+.slider__slides {
   width: 500%;
   transition: transform 0.8s ease;
-  
 }
 
-.slider-slides img {
+.slider__slides img {
   float: left;
   width: 370px;
   height: 342px;
@@ -217,7 +216,7 @@ body::before {
 
 /* Arrows */
 
-.slider-control {
+.slider__control {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -226,7 +225,7 @@ body::before {
   z-index: 55;
 }
 
-.slider-control label {
+.slider__control label {
   display: none;
   z-index: 0;
 }
@@ -251,7 +250,7 @@ body::before {
   transform: rotate(-135deg);
 }
 
-.slider-control .arrow:hover {
+.slider__control .arrow:hover {
   opacity: 1;
 }
 
@@ -263,7 +262,7 @@ body::before {
   left: 1%;
 }
 
-.slider-pagination {
+.slider__pagination {
   position: absolute;
   bottom: -25px;
   left: 0;
@@ -272,70 +271,43 @@ body::before {
   z-index: 10;
 }
 
-.slider-pagination label {
+.slider__pagination label {
   width: 30px;
   height: 10px;
   margin: 0 5px;
   display: inline-block;
   border-radius: 20%;
   background: rgba(1, 107, 43, 0.5);
-  /* border: solid 2px rgba(1, 107, 43, 0.9); */
   cursor: pointer;
 }
 
 /* Slider arrow effect */
 
-.slide-radio1:checked~.next .numb2,
-.slide-radio2:checked~.next .numb3,
-.slide-radio2:checked~.previous .numb1,
-.slide-radio3:checked~.previous .numb2 {
+.slider__radio1:checked~.next .numb2,
+.slider__radio2:checked~.next .numb3,
+.slider__radio2:checked~.previous .numb1,
+.slider__radio3:checked~.previous .numb2 {
   display: block;
   z-index: 1;
 }
 
 /* Slider pagination effect */
 
-.slide-radio1:checked~.slider-pagination .page1,
-.slide-radio2:checked~.slider-pagination .page2,
-.slide-radio3:checked~.slider-pagination .page3 {
+.slider__radio1:checked~.slider__pagination .page1,
+.slider__radio2:checked~.slider__pagination .page2,
+.slider__radio3:checked~.slider__pagination .page3 {
   background: rgba(1, 107, 43, 0.9);
 }
 
-/* .slider-controls {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.slider-controls label {
-  display: inline-block;
-  margin: 0 3px;
-  width: 10px;
-  height: 10px;
-  border: 4px solid white;
-  border-radius: 50%;
-  background-color: #cccccc;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  transition: background-color 0.2s;
-} */
-
-#btn-1:checked~.slider-controls label[for=btn-1],
-#btn-2:checked~.slider-controls label[for=btn-2],
-#btn-3:checked~.slider-controls label[for=btn-3],
-#btn-3:checked~.slider-controls label {
-  background-color: #666666;
-}
-
-
-#btn-1:checked~.slider-inner .slider-slides {
+.slider__radio1:checked~.slider__wrapper .slider__slides {
   transform: translate(0);
 }
 
-#btn-2:checked~.slider-inner .slider-slides {
+.slider__radio2:checked~.slider__wrapper .slider__slides {
   transform: translate(-1170px);
 }
 
-#btn-3:checked~.slider-inner .slider-slides {
+.slider__radio3:checked~.slider__wrapper .slider__slides {
   transform: translate(-2340px);
 }
 
@@ -407,7 +379,7 @@ body::before {
 .advantages__accordion p {
   display: none;
   overflow: hidden;
-  height: 0;
+  /* height: 0; */
   margin: 0;
   padding: 0 5px 5px 10px;
 }
@@ -469,6 +441,65 @@ body::before {
   border-radius: 5px;
 }
 
+.prices__accordion section:first-of-type {
+  background-color: rgb(227, 211, 181);
+  color: rgb(227, 211, 181);
+}
+
+.prices__accordion section:nth-of-type(2) {
+  background-color: rgb(0, 81, 135);
+  color: rgb(0, 81, 135);
+}
+
+.prices__accordion section:nth-of-type(3) {
+  background-color: rgb(17, 66, 50);
+  color: rgb(17, 66, 50);
+}
+
+.prices__accordion section:nth-of-type(4) {
+  background-color: rgb(83, 42, 0);
+  color: rgb(83, 42, 0);
+}
+
+.prices__accordion section:nth-of-type(5) {
+  background-color: rgb(88, 24, 31);
+  color: rgb(88, 24, 31);
+}
+
+.prices__accordion section:nth-of-type(6) {
+  background-color: rgb(56, 62, 66);
+  color: rgb(56, 62, 66);
+}
+
+.prices__accordion section:nth-of-type(7) {
+  background-color: rgb(14, 14, 16);
+  color: rgb(14, 14, 16);
+}
+
+.prices__accordion section:nth-of-type(8) {
+  background-color: rgb(61, 54, 53);
+  color: rgb(61, 54, 53);
+}
+
+.prices__accordion section:nth-of-type(9) {
+  background-color: rgb(165, 120, 52);
+  color: rgb(165, 120, 52);
+}
+
+.prices__accordion section:nth-of-type(10) {
+  background-color: rgb(61, 54, 53);
+  color: rgb(61, 54, 53);
+}
+
+.prices__accordion section:nth-of-type(11) {
+  background-color: rgb(111, 74, 37);
+  color: rgb(111, 74, 37);
+}
+.prices__accordion section:nth-of-type(12) {
+  background-color: rgb(107, 110, 107);
+  color: rgb(107, 110, 107);
+}
+
 .prices__accordion section h2 {
   position: absolute;
   font-size: 20px;
@@ -505,13 +536,52 @@ body::before {
   background-color: #fff;
 }
 
-.prices__accordion section:target h2 {
-  color: rgba(2, 56, 24, 0.8);
-  /* position: static;
-  font-size: 1.3em;
-  text-indent: 0;
-  color: #333;
-  transform: rotate(0deg); */
+.prices__accordion #acc1:target h2 {
+  color: rgb(227, 211, 181);
+}
+
+.prices__accordion #acc2:target h2 {
+  color: rgb(0, 81, 135);
+}
+
+.prices__accordion #acc3:target h2 {
+  color: rgb(17, 66, 50);
+}
+
+.prices__accordion #acc4:target h2 {
+  color: rgb(83, 42, 0);
+}
+
+.prices__accordion #acc5:target h2 {
+  color: rgb(88, 24, 31);
+}
+
+.prices__accordion #acc6:target h2 {
+  color: rgb(56, 62, 66);
+}
+
+.prices__accordion #acc7:target h2 {
+  color: rgb(14, 14, 16);
+}
+
+.prices__accordion #acc8:target h2 {
+  color: rgb(61, 54, 53);
+}
+
+.prices__accordion #acc9:target h2 {
+  color: rgb(165, 120, 52);
+}
+
+.prices__accordion #acc10:target h2 {
+  color: rgb(61, 54, 53);
+}
+
+.prices__accordion #acc11:target h2 {
+  color: rgb(111, 74, 37);
+}
+
+.prices__accordion #acc12:target h2 {
+  color: rgb(107, 110, 107);
 }
 
 .prices__accordion section,
@@ -698,3 +768,4 @@ input:invalid:focus {
   line-height: 120px;
   font-family: 'Philosopher', 'Times New Roman', serif;
 }
+

@@ -214,6 +214,11 @@ body::before {
   opacity: 0.9;
 }
 
+.slider__slides img:hover {
+  box-shadow:  0 -5px 4px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
 /* Arrows */
 
 .slider__control {

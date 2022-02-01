@@ -210,11 +210,12 @@ body::before {
   width: 370px;
   height: 342px;
   margin-right: 20px;
+  opacity: 0.9;
 }
 
 .slider__slides img:hover {
   box-shadow:  0 -5px 4px 4px rgba(0, 0, 0, 0.5);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* Arrows */

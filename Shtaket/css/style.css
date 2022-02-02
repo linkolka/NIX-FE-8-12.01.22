@@ -667,7 +667,7 @@ legend {
 
 input[type="text"],
 input[type="email"],
-input[type="phone"],
+input[type="tel"],
 input[type="number"],
 textarea, 
 select {

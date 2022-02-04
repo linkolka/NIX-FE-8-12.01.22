@@ -1,14 +1,7 @@
 body {
   margin: 0;
   min-width: 1440px;
-  /* padding: 15px; */
-}
-
-.container {
-  padding: 15px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100px 1fr 1fr 100px;
@@ -18,6 +11,7 @@ body {
       ". . green green"
       "yellow yellow green green";
   gap: 30px 15px;
+  padding: 15px;
 }
 
 .navy {
@@ -67,7 +61,7 @@ body {
 }
 
 @media (max-width: 700px){
-  .container {
+  body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:

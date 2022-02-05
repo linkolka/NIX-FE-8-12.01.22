@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  min-width: 1440px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: #fff;
+  background-image:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  repeating-linear-gradient(45deg, rgba(150, 146, 146, 0.5) 1px, rgba(150, 146, 146, 0.829) 20px),
+  repeating-linear-gradient(-95deg, rgba(150, 146, 146, 0.5) 1px, rgba(150, 146, 146, 0.829) 20px);
+}
+
+.header, .footer {
+  min-height: 50px;
+  padding: 10px;
+}
+
+
+
+nav {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.logo {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+.logo:active {
+  opacity: 0.8;
+}
+
+.main {
+  text-align: center;
+}
+
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 40px;
+  align-items: end;
+  background-color: rgba(252, 182, 182, 0.5);
+  /* background-image: 
+      repeating-linear-gradient(45deg, rgba(252, 182, 182, 0.5) 1px, rgba(252, 182, 182, 0.829) 10px),
+      repeating-linear-gradient(-45deg, rgba(252, 182, 182, 0.5) 1px, rgba(252, 182, 182, 0.829) 10px); */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: auto;
+  column-gap: 20px;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 25px 5px;
+}
+
+/* .image img:hover {
+  transform: scale(1.05);
+} */
+
+.image {
+  width: 300px;
+}
+
+.image--big {
+  width: 400px;
+}
+
+.first-row {
+  justify-self: end;
+}
+
+.second-row {
+  justify-self: start;
+}
+
+.third-row {
+  justify-self: center;
+}
+
+.row:nth-child(odd) {
+  background-color: rgba(135, 250, 206, 0.5);
+}
+.row:nth-child(even) {
+  background-color: rgba(152, 242, 248, 0.5);
+}
+
+.footer {
+  text-align: center;
+}
+
+.copy {
+  font-weight: bold;
+}

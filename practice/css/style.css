@@ -89,21 +89,46 @@ body {
         "blue . orange";
     padding-top: 15px;
   }
+
   .red {
     display: none;
   }
 }
 
-a {
+/*Доп стили для оформления*/
+.menu {
+  width: 1240px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__link {
   padding: 10px 15px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
   color: #000;
   border-radius: 10px;
 }
 
-a:hover {
+.menu__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link:hover {
   font-size: 20px;
   background-color: rgba(255, 255, 255, 1);
 }
+

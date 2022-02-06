@@ -9,11 +9,21 @@ body {
   font-size: 18px;
   color: #fff;
   background-image:
-  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
-  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
-  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(255, 0, 0, 0) 70.71%),
-  repeating-linear-gradient(45deg, rgba(150, 146, 146, 0.5) 1px, rgba(150, 146, 146, 0.829) 20px),
-  repeating-linear-gradient(-95deg, rgba(150, 146, 146, 0.5) 1px, rgba(150, 146, 146, 0.829) 20px);
+      repeating-linear-gradient(45deg, rgba(150, 146, 146, 0.5) 1px,
+       rgba(150, 146, 146, 0.829) 20px),
+      repeating-linear-gradient(-95deg, rgba(150, 146, 146, 0.5) 1px,
+       rgba(150, 146, 146, 0.829) 20px);
+}
+
+.rainbow {
+  background-image: 
+      linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(255, 0, 0, 0) 70.71%),
+       repeating-linear-gradient(45deg, rgba(150, 146, 146, 0.5) 1px,
+         rgba(150, 146, 146, 0.829) 20px),
+       repeating-linear-gradient(-95deg, rgba(150, 146, 146, 0.5) 1px,
+         rgba(150, 146, 146, 0.829) 20px);
 }
 
 .header, .footer {
@@ -21,11 +31,12 @@ body {
   padding: 10px;
 }
 
-
-
 nav {
   width: 1240px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 
 .logo {
@@ -42,6 +53,29 @@ nav {
   opacity: 0.8;
 }
 
+.btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 2px solid rgb(150, 146, 146) ;
+  font: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(150, 146, 146);
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: rgb(150, 146, 146);
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
 .main {
   text-align: center;
 }
@@ -54,10 +88,6 @@ nav {
   grid-template-rows: auto;
   row-gap: 40px;
   align-items: end;
-  background-color: rgba(252, 182, 182, 0.5);
-  /* background-image: 
-      repeating-linear-gradient(45deg, rgba(252, 182, 182, 0.5) 1px, rgba(252, 182, 182, 0.829) 10px),
-      repeating-linear-gradient(-45deg, rgba(252, 182, 182, 0.5) 1px, rgba(252, 182, 182, 0.829) 10px); */
 }
 
 .row {
@@ -72,11 +102,9 @@ nav {
   width: 100%;
   height: auto;
   border-radius: 25px 5px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
 }
-
-/* .image img:hover {
-  transform: scale(1.05);
-} */
 
 .image {
   width: 300px;
@@ -87,21 +115,21 @@ nav {
 }
 
 .first-row {
-  justify-self: end;
+  justify-items: end;
 }
 
 .second-row {
-  justify-self: start;
+  justify-items: start;
 }
 
 .third-row {
-  justify-self: center;
+  justify-items: center;
 }
 
-.row:nth-child(odd) {
+.odd {
   background-color: rgba(135, 250, 206, 0.5);
 }
-.row:nth-child(even) {
+.even {
   background-color: rgba(152, 242, 248, 0.5);
 }
 

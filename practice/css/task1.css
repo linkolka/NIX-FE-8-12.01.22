@@ -13,7 +13,6 @@ body {
        rgba(150, 146, 146, 0.829) 20px),
       repeating-linear-gradient(-95deg, rgba(150, 146, 146, 0.5) 1px,
        rgba(150, 146, 146, 0.829) 20px);
-  background-repeat: no-repeat;
 }
 
 .rainbow {

@@ -1,0 +1,39 @@
+.navbar a.logo {
+  color: #fff;
+}
+
+.header {
+  padding: 10px;
+}
+
+.navbar a.logo:hover {
+  color: #fff;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.register-img {
+  min-width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.photo-bg {
+  background-color: #e5e5e5;
+}
+
+.list-group-item > div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-facebook {
+  background-color: rgb(35, 10, 146);
+  color: #fff;
+}
+

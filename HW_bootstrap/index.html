@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="container bg-">
+  <div class="container overflow-hidden">
     <div class="row">
       <div class="col-md-2 bg-primary">
 
@@ -76,34 +76,35 @@
             </form>
           </div>
           <div class="col-md-2">
-            <button class="btn" type="button">
+            <button class="btn btn-alarm" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
                 viewBox="0 0 16 16">
                 <path
                   d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
               </svg>
-              <span>3+</span>
+
             </button>
-            <button class="btn" type="button">
+            <button class="btn btn-message" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-envelope-fill" viewBox="0 0 16 16">
                 <path
                   d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
               </svg>
-              <span class="badge badge-danger">7</span>
+
             </button>
           </div>
           <div class="col-md-3">
             <div class="profile">
               <a class="profile-name" href="#" data-text="O">Nix Student</a>
+              <img class="user-img rounded-circle" src="img/user-img2.jpg" alt="">
             </div>
           </div>
         </header>
         <main class="row p-4">
 
           <h1 class="col-md-6 h1 title">Goals</h1>
-          <div class="col-md-6">
-            <button class="btn btn-primary" type="button">
+          <div class="col-md-6 my-3">
+            <button class="btn btn-primary float-right" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
                 viewBox="0 0 16 16">
                 <path
@@ -116,15 +117,15 @@
 
 
           <div class="col-md-6 shadow p-3">
-            <a href="#">Earnings (monthly)</a>
+            <a class="text-uppercase text-primary" href="#">Earnings (monthly)</a>
             <p>$40,000</p>
           </div>
           <div class="col-md-6 shadow p-3">
-            <a href="#">Earnings (annual)</a>
+            <a class="text-uppercase text-success" href="#">Earnings (annual)</a>
             <p>$215,000</p>
           </div>
           <div class="col-md-6 shadow p-3">
-            <a href="#">Tasks</a>
+            <a class="text-uppercase text-info" href="#">Tasks</a>
             <p>50%</p>
             <div class="progress">
               <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="25"
@@ -132,27 +133,29 @@
             </div>
           </div>
           <div class="col-md-6 shadow p-3">
-            <a href="#">Earnings (monthly)</a>
+            <a class="text-uppercase text-warning" href="#">Earnings (monthly)</a>
             <p>$40,000</p>
           </div>
 
 
-          <div class="col-md-12 shadow">
-            <h2 class="h2 title">Todo List</h2>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <h3>Lunch meeting</h3>
-                <p>10:30 AM</p>
-              </li>
-              <li class="list-group-item">
-                <h3>Lunch meeting</h3>
-                <p>10:30 AM</p>
-              </li>
-              <li class="list-group-item">
-                <h3>Lunch meeting</h3>
-                <p>10:30 AM</p>
-              </li>
-            </ul>
+          <div class="col-md-12 my-5 card shadow">
+            <h2 class="h2 card-header py-3 text-primary title">Todo List</h2>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h3>Lunch meeting</h3>
+                  <p>10:30 AM</p>
+                </li>
+                <li class="list-group-item">
+                  <h3>Lunch meeting</h3>
+                  <p>10:30 AM</p>
+                </li>
+                <li class="list-group-item">
+                  <h3>Lunch meeting</h3>
+                  <p>10:30 AM</p>
+                </li>
+              </ul>
+            </div>
           </div>
 
         </main>

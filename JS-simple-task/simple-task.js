@@ -36,7 +36,7 @@ console.log(getStr('Миксины могут быть также вызваны
 //TASK3
 
 function getMissingElement(arr) {
-	let example = [0,1,2,3,4,5,6,7,8,9];
+let example = [0,1,2,3,4,5,6,7,8,9];
   
   for(let item of example) {
   if(!arr.includes(item)) {
@@ -59,8 +59,8 @@ console.log(checkIncludingStr('abcabcd', 'bcd'));
 
 function getAverageValues(arr) {
 let result = [];
-	for (let i = 0; i < arr.length - 1; i++) {
-  	result.push((arr[i] + arr[i+1])/2);
+for (let i = 0; i < arr.length - 1; i++) {
+  result.push((arr[i] + arr[i+1])/2);
   }
   return result;
 }
@@ -85,7 +85,7 @@ const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,"H
 function checkName(name) {
 let score = 0;
 let result;
-	for (let item of name) {
+for (let item of name) {
   score += scores[item];
   }
   
@@ -107,12 +107,12 @@ console.log(checkName('OLYA'));
 //TASK8
 
 function countVowels(str) {
-	let vowels = ['a','e','y','u','i','o'];
+  let vowels = ['a','e','y','u','i','o'];
   let result = 0;
   
-  for(let item of str.toLowerCase()) {
+  for(let item of str) {
   
-  if(vowels.includes(item)) {
+  if(vowels.includes(item.toLowerCase())) {
   	result++;
   	}
   }
@@ -122,3 +122,49 @@ function countVowels(str) {
 console.log(countVowels('Celebration'));
 
 //TASK9
+
+function removeABC(str) {
+  let abc = ['a','b','c'];
+  let result = '';
+  
+  for(let item of str) {
+    if(!abc.includes(item.toLowerCase())) {
+	result += item;
+    }
+  }
+  
+  if(result === str) {
+  result = null;
+  }
+  return result;
+}
+
+console.log(removeABC('This might Be A bit hard'));
+
+//TASK10
+
+function getUniqueElements(arr1, arr2) {
+arr2 = arr2.concat(arr1);
+	/*Сначала была идея перед объединением массивов проверить есть ли одинаковые значения у массива 1 и массива 2, но потом подумала, что это имеет смысл только в том случае, если подразумевается, что в 
+	внутри этих массивов нет повторяющихся значений
+	   for(let item of arr1) {
+	    if(!arr2.includes(item)) {
+	      arr2.push(item);
+	    }
+	  } 
+	  из условия я поняла, что в уникальные значения должны быть типа string, поэтому перевела их*/
+  
+  arr2.sort((a, b) => a - b);
+  let result = [String(arr2[0])];
+  
+  for(let i = 0; i< arr2.length - 1; i++) {
+  	if(arr2[i] !== arr2[i+1]) {
+    result.push(String(arr2[i+1]));
+    }
+  }
+ return result;
+}
+
+console.log(getUniqueElements([1, 2, 3], [100, 2, 1, 10]));
+
+

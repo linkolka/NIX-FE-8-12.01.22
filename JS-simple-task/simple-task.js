@@ -77,3 +77,48 @@ function getMaxNumberValue(num) {
 }
 
 console.log(getMaxNumberValue(42145));
+
+//TASK7
+
+const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,"H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,"N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,"T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
+
+function checkName(name) {
+let score = 0;
+let result;
+	for (let item of name) {
+  score += scores[item];
+  }
+  
+  if(score <=60) {
+  	result = "NOT TOO GOOD"
+  } else if(score >= 61 && score <= 300) {
+  result = "PRETTY GOOD";
+  } else if(score >=301 && score <=599) {
+  result = "VERY GOOD";
+  } else if(score >=600) {
+  result = "THE BEST";
+  }
+  
+  return result;
+}
+
+console.log(checkName('OLYA'));
+
+//TASK8
+
+function countVowels(str) {
+	let vowels = ['a','e','y','u','i','o'];
+  let result = 0;
+  
+  for(let item of str.toLowerCase()) {
+  
+  if(vowels.includes(item)) {
+  	result++;
+  	}
+  }
+  return result;
+}
+
+console.log(countVowels('Celebration'));
+
+//TASK9

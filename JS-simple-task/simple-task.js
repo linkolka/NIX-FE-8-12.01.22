@@ -67,4 +67,13 @@ let result = [];
 
 console.log(getAverageValues([1, 3, 5, 1, -10]));
 
+//TASK6
 
+function getMaxNumberValue(num) {
+  let arr = String(num).split('').sort((a, b) => a - b).reverse();
+  
+  return Number(arr.join(''));
+ 
+}
+
+console.log(getMaxNumberValue(42145));

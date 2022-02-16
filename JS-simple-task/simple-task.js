@@ -167,4 +167,68 @@ arr2 = arr2.concat(arr1);
 
 console.log(getUniqueElements([1, 2, 3], [100, 2, 1, 10]));
 
+//TASK11
 
+function getObjCopy(obj) {
+	let arrKey = [];
+  let arrValue = [];
+  let result = {};
+  
+  for(let key in obj) {
+  	arrValue.push(key);
+    arrKey.push(obj[key]);
+  }
+  
+  for (let i = 0; i < arrKey.length; i++) {
+  	result[arrKey[i]] = arrValue[i];
+  }
+  
+  return result;
+}
+
+console.log(getObjCopy({red: "#FF0000", green: "#00FF00", white: "#FFFFFF"}));
+
+//TASK12
+
+function calculateDifference(obj, sum) {
+let objSum = 0;
+
+	for (let key in obj) {
+  	objSum +=obj[key];
+  }
+  
+  return objSum - sum;
+}
+
+console.log(calculateDifference({  skate: 200, painting: 200, shoes: 1 }, 400));
+
+//TASK13
+
+function rotations(str) {
+	let rightRotations= [str];
+	let leftRotations = [str];
+
+	for (let i = 0; i < str.length-1; i++) {
+		let itemRotated = leftRotations[i].slice(1)+ str[i];
+		leftRotations.push(itemRotated);
+	}
+
+	for (let i = 0; i < str.length-1; i++) {
+		let itemRotated = rightRotations[i].slice(-1) + rightRotations[i].slice(0,-1);
+
+		rightRotations.push(itemRotated);
+  
+}
+
+return `Вращение вправо - ${rightRotations}, Вращение влево - ${leftRotations}`;
+}
+
+console.log(rotations('abcd'));
+
+//TASK14
+
+function checkBrick(a,b,c,w,h) {
+	return a<=w && b<=h || a<=h && b<=w || c<=w && b<=h ||c<=h && b<=w || a<=w && c<=h || a<=h && c<=w;
+}
+
+console.log(checkBrick(1,3,4,2,1));

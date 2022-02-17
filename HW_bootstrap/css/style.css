@@ -1,5 +1,12 @@
 .navbar a.logo {
   color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  transform: rotate(-30deg);
+  margin-right: 10px;
 }
 
 .header {
@@ -46,11 +53,43 @@
   padding: 0.05rem;
 }
 
+.goals-img {
+   position: absolute;
+   right: 1rem;
+   top: 50%;
+   transform: translateY(-50%);
+   fill: #ced4da;
+}
+
+.goals-text {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.checkbox {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ced4da;
+  border-radius: 3px;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
 
 .rounded-more {
   border-radius: 2rem;
 }
 
+.progress-width {
+  width: 70%;
+  margin-left: 1.2rem;
+}
 /* .photo-bg {
   background-color: #e5e5e5;
 } */

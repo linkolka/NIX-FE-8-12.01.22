@@ -15,8 +15,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2 bg-primary">
-        <nav class="navbar flex-column navbar-dark">
-          <a class="logo">Brand</a>
+        <nav class="d-none d-md-block navbar flex-column navbar-dark">
+          <a class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+              class="bi bi-emoji-wink-fill" viewBox="0 0 16 16">
+              <path
+                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM7 6.5C7 5.672 6.552 5 6 5s-1 .672-1 1.5S5.448 8 6 8s1-.672 1-1.5zM4.285 9.567a.5.5 0 0 0-.183.683A4.498 4.498 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.498 3.498 0 0 1 8 11.5a3.498 3.498 0 0 1-3.032-1.75.5.5 0 0 0-.683-.183zm5.152-3.31a.5.5 0 0 0-.874.486c.33.595.958 1.007 1.687 1.007.73 0 1.356-.412 1.687-1.007a.5.5 0 0 0-.874-.486.934.934 0 0 1-.813.493.934.934 0 0 1-.813-.493z" />
+            </svg>
+            Brand</a>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="index.html">
@@ -74,34 +80,31 @@
               </div>
             </form>
           </div>
-          <div class="col-md-2">
-            <button class="btn btn-alarm" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-              </svg>
+          <button class="btn btn-alarm col-1" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ced4da" class="bi bi-bell-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+            </svg>
+          </button>
 
-            </button>
-            <button class="btn btn-message" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                <path
-                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-              </svg>
-
-            </button>
-          </div>
+          <button class="btn btn-message col-1" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ced4da" class="bi bi-envelope-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+            </svg>
+          </button>
           <div class="col-md-3">
             <div class="profile">
-              <a class="profile-name" href="#" data-text="O">Nix Student</a>
+              <a class="text-secondary" href="#" data-text="O">Nix Student</a>
               <img class="user-img rounded-circle" src="img/user-img2.jpg" alt="">
             </div>
           </div>
         </header>
         <main class="row p-4">
-          <h1 class="col-md-12 h1 title">Profile</h1>
-          <div class="col-md-4 card shadow text-center">
+          <h1 class="col-12 mb-3"><small>Profile</small></h1>
+          <div class="col-12 col-md-4 mb-3 card shadow text-center">
             <div class="card-body">
               <img class="img-fluid rounded-circle my-3 profile-img" src="img/user-img2.jpg" alt="">
               <div>
@@ -109,26 +112,24 @@
               </div>
             </div>
           </div>
-          <div class="col-md-8 card shadow">
+          <div class="col-12 col-md-8 mb-3 card shadow">
             <h2 class="h2 title card-header py-3 text-primary">User Settings</h2>
             <form class="card-body" action="#" method="post">
               <div class="row form-group">
-                <label class="control-label col-md-6" for="username">Username</label>
-                <label class="control-label col-md-6" for="firstname">First Name</label>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3">
+                  <label class="control-label" for="username">Username</label>
                   <input class="form-control" type="text" id="username" name="username" placeholder="user.name">
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3">
+                  <label class="control-label" for="firstname">First Name</label>
                   <input class="form-control" type="text" id="firstname" name="firstname" placeholder="John">
                 </div>
-              </div>
-              <div class="row form-group">
-                <label class="control-label col-md-6" for="email">Email Address</label>
-                <label class="control-label col-md-6" for="lastname">Last Name</label>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3">
+                  <label class="control-label" for="email">Email Address</label>
                   <input class="form-control" type="email" id="email" name="email" placeholder="user@example.com">
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3">
+                  <label class="control-label" for="lastname">Last Name</label>
                   <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Doe">
                 </div>
               </div>
@@ -139,8 +140,8 @@
               </div>
             </form>
           </div>
-          <div class="col-md-4 card shadow">
-            <h2 class="h2 card-header pb-5 text-primary title">Homeworks</h2>
+          <div class="col-12 col-md-4 mb-3 card shadow">
+            <h2 class="h2 card-header pb-md-5 text-primary title">Homeworks</h2>
             <div class="card-body">
               <ul class="list-group list-group-flush list-unstyled">
                 <li class="mb-3">
@@ -197,22 +198,20 @@
             </div>
 
           </div>
-          <div class="col-md-8 card shadow">
-            <h2 class="h2 title pb-4 pt-5 text-primary card-header">Contact Settings</h2>
+          <div class="col-12 col-md-8 card shadow">
+            <h2 class="h2 title pb-md-4 pt-md-5 text-primary card-header">Contact Settings</h2>
             <form class="card-body" action="#" method="get">
               <div class="row form-group">
-                <label class="control-label col-md-12" for="address">Address</label>
-                <div class="col-md-12">
+                <div class="col-12 mb-3">
+                  <label class="control-label" for="address">Address</label>
                   <input class="form-control" type="text" id="address" name="address" placeholder="Sunset blv, 123">
                 </div>
-              </div>
-              <div class="row form-group">
-                <label class="control-label col-md-6" for="city">City</label>
-                <label class="control-label col-md-6" for="country">Country</label>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3">
+                  <label class="control-label" for="city">City</label>
                   <input class="form-control" type="text" id="city" name="city" placeholder="Los Angeles">
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3">
+                  <label class="control-label" for="country">Country</label>
                   <input class="form-control" type="text" id="country" name="country" placeholder="USA">
                 </div>
               </div>
@@ -224,9 +223,18 @@
             </form>
           </div>
         </main>
-        <footer class="row justify-content-center">
-          <p>Copyright &copy; Nix Student 2022</p>
+        <footer class="row p-3">
+          <p class="col-12 text-center">Copyright &copy; Nix Student 2022</p>
         </footer>
+        <div class="button-up">
+          <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-up"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>

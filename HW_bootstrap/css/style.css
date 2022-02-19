@@ -2,6 +2,13 @@
   color: #fff;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+
+.navbar a.logo:hover {
+  color: #fff;
 }
 
 .logo svg {
@@ -11,10 +18,6 @@
 
 .header {
   padding: 10px;
-}
-
-.navbar a.logo:hover {
-  color: #fff;
 }
 
 .profile-img {
@@ -27,6 +30,14 @@
   width: 50px;
   height: 50px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .user-img {
+    width: 35px;
+    height: 35px;
+  }
+ 
 }
 
 .register-img {
@@ -42,15 +53,19 @@
 
 .btn-alarm::after,
 .btn-message::after {
-  position: relative;
+  position: absolute;
   content: '+3';
-  top: -0.5rem;
-  right: 1em;
+  top: 10px;
+  right: 20px;
   font-size: x-small;
   background-color: #dc3545;
   color: #fff;
-  border-radius: 0.25rem;
-  padding: 0.05rem;
+  border-radius: 4px;
+  padding: 1px;
+}
+
+.bg-main {
+  background-color: #f0f0f0;
 }
 
 .goals-img {
@@ -105,3 +120,18 @@
   color: #fff;
 }
 
+.register-button{
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ced4da;
+}
+
+.button-up {
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem; 
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  background-color: #ced4da;
+}

@@ -14,39 +14,35 @@
 <body>
   <div class="container bg-primary py-2">
     <div class="row bg-light rounded mx-3 align-items-center">
-      <div class="col-md-4 photo-bg">
+      <div class="col-md-4 photo-bg d-none d-md-block">
         <img class="img-fluid register-img" src="img/user-img2.jpg" alt="">
       </div>
-      <div class="col-md-8 bg-light p-5 text-center">
-        <h2 class="h2 mb-4 title">Create an Account!</h2>
+      <div class="col-12 col-md-8 bg-light p-5 text-center">
+        <h2 class="mb-4"><small>Create an Account!</small></h2>
         <form class="" action="#" method="post">
           <div class="row form-group">
             <label class="sr-only" for="first_name">First Name</label>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6 mb-3">
               <input type="text" class="form-control py-4 rounded-more" id="first_name" name="first_name"
                 placeholder="First name">
             </div>
             <label class="sr-only" for="last_name">Last Name</label>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6 mb-3">
               <input type="text" class="form-control py-4 rounded-more" id="last_name" name="first_name"
                 placeholder="Last name">
             </div>
-          </div>
-          <div class="row form-group">
             <label class="sr-only" for="email">Email</label>
-            <div class="col-md-12">
+            <div class="col-12 mb-3">
               <input type="email" class="form-control py-4 rounded-more" id="email" name="email"
                 placeholder="Email address">
             </div>
-          </div>
-          <div class="row form-group">
             <label class="sr-only" for="password">Password</label>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6 mb-3">
               <input type="password" class="form-control py-4 rounded-more" id="password" name="password"
                 placeholder="Password">
             </div>
             <label class="sr-only" for="repeat-password">Repeat password</label>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6">
               <input type="password" class="form-control py-4 rounded-more" id="repeat-password" name="repeat_password"
                 placeholder="Repeat password">
             </div>
@@ -54,6 +50,7 @@
           <div class="row form-group">
             <button class="btn btn-primary rounded-more btn-block btn-lg">Register Account</button>
           </div>
+          <div class="register-button"></div>
           <div class="row form-group">
             <button class="btn btn-danger rounded-more btn-block btn-lg">
               <span class="google-badge">
@@ -79,18 +76,20 @@
               with
               Facebook</button>
           </div>
+          <div class="register-button"></div>
         </form>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-12">
             <a href="#">Forgot Password?</a>
           </div>
-          <div class="col-md-12">
+          <div class="col-12">
             <a href="#">Already have an account? Login!</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </body>
 
 </html>

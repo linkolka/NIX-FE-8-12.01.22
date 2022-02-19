@@ -15,8 +15,7 @@
   <div class="container overflow-hidden">
     <div class="row">
       <div class="col-md-2 bg-primary">
-
-        <nav class="navbar flex-column navbar-dark">
+        <nav class="d-none d-md-block navbar flex-column navbar-dark">
           <a class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
               class="bi bi-emoji-wink-fill" viewBox="0 0 16 16">
@@ -63,12 +62,19 @@
           </ul>
         </nav>
       </div>
-      <div class="col-md-10">
+      <div class="col-12 col-md-10 position-relative">
         <header class="row header shadow">
-          <div class="col-md-7">
+          <div class="d-inline-block col-1 d-md-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007bff" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </div>
+          <div class="d-none d-md-block col-md-7">
             <form class="search input-group" action="#" method="get">
               <label hidden id="search">Поле поиска</label>
-              <input class="search-field form-control" type="text" name="search" id="search" placeholder="Поиск..."
+              <input class="search-field form-control" type="text" name="search" id="search" placeholder="Search for..."
                 area-label="Search term" area-describedby="basic-addon">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
@@ -81,35 +87,49 @@
               </div>
             </form>
           </div>
-          <div class="col-md-2">
-            <button class="btn btn-alarm" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ced4da" class="bi bi-bell-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-              </svg>
-
-            </button>
-            <button class="btn btn-message" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ced4da" class="bi bi-envelope-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-              </svg>
-
-            </button>
+          <div class="d-md-none col-7">
+            <form class="search input-group" action="#" method="get">
+              <label hidden id="search">Поле поиска</label>
+              <input class="search-field form-control border-0" type="text" name="search" id="search"
+                area-label="Search term" area-describedby="basic-addon">
+              <div class="input-group-append">
+                <button class="btn" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ced4da" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="col-md-3">
+
+          <button class="btn btn-alarm col-1" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ced4da" class="bi bi-bell-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+            </svg>
+          </button>
+
+          <button class="btn btn-message col-1" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ced4da" class="bi bi-envelope-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+            </svg>
+          </button>
+
+          <div class="col-1 col-md-3">
             <div class="profile">
-              <a class="text-secondary" href="#" data-text="O">Nix Student</a>
+              <a class="text-secondary d-none d-md-inline-block href=" #" data-text="O">Nix Student</a>
               <img class="user-img rounded-circle" src="img/user-img2.jpg" alt="">
             </div>
           </div>
         </header>
-        <main class="row p-4">
-
-          <h1 class="col-md-6 h1 title">Goals</h1>
-          <div class="col-md-6 my-3">
+        <main class="row p-4 bg-main">
+          <h1 class="col-12 col-md-6 mb-3"><small>Goals</small></h1>
+          <div class="col-md-6 d-none d-md-block my-3">
             <button class="btn btn-primary float-right" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
                 viewBox="0 0 16 16">
@@ -120,9 +140,7 @@
               </svg>
               Generate Report</button>
           </div>
-
-
-          <div class="col-md-6 shadow p-3">
+          <div class="col-12 col-md-6 shadow p-3 bg-light mb-3">
             <h5 class="text-uppercase text-primary" href="#">Earnings (monthly)</h5>
             <p class="goals-text">$40,000</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="" class="bi bi-calendar-fill goals-img"
@@ -131,7 +149,7 @@
                 d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
             </svg>
           </div>
-          <div class="col-md-6 shadow p-3 g-5">
+          <div class="col-12 col-md-6 shadow p-3 g-5 bg-light mb-3">
             <h5 class="text-uppercase text-success" href="#">Earnings (annual)</h5>
             <p class="goals-text">$215,000</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill=""
@@ -140,7 +158,7 @@
                 d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
             </svg>
           </div>
-          <div class="col-md-6 shadow p-3">
+          <div class="col-12 col-md-6 shadow p-3 bg-light mb-3">
             <h5 class="text-uppercase text-info" href="#">Tasks</h5>
             <div class="goals-text d-flex align-items-center">50%
               <div class="progress progress-width">
@@ -159,7 +177,7 @@
             </svg>
 
           </div>
-          <div class="col-md-6 shadow p-3">
+          <div class="col-12 col-md-6 shadow p-3 bg-light mb-3">
             <h5 class="text-uppercase text-warning" href="#">Pending requests</h5>
             <p class="goals-text">18</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="" class="goals-img bi bi-chat-fill"
@@ -168,9 +186,7 @@
                 d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
             </svg>
           </div>
-
-
-          <div class="col-md-12 my-5 card shadow">
+          <div class="col-12 my-5 card shadow">
             <h2 class="h2 card-header py-3 text-primary title">Todo List</h2>
             <div class="card-body">
               <ul class="list-group list-group-flush">
@@ -192,14 +208,20 @@
               </ul>
             </div>
           </div>
-
         </main>
-        <footer class="row justify-content-center">
-          <p>Copyright &copy; Nix Student 2022</p>
+        <footer class="row p-3">
+          <p class="col-12 text-center">Copyright &copy; Nix Student 2022</p>
         </footer>
-
+        <div class="button-up">
+          <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-up"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg>
+          </a>
+        </div>
       </div>
-
     </div>
   </div>
 

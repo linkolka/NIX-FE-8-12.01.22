@@ -62,12 +62,20 @@
           </ul>
         </nav>
       </div>
+
       <div class="col-md-10">
         <header class="row header shadow">
-          <div class="col-md-7">
+          <div class="d-inline-block col-1 d-md-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007bff" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </div>
+          <div class="d-none d-md-block col-md-7">
             <form class="search input-group" action="#" method="get">
               <label hidden id="search">Поле поиска</label>
-              <input class="search-field form-control" type="text" name="search" id="search" placeholder="Поиск..."
+              <input class="search-field form-control" type="text" name="search" id="search" placeholder="Search for..."
                 area-label="Search term" area-describedby="basic-addon">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
@@ -80,28 +88,46 @@
               </div>
             </form>
           </div>
-          <button class="btn btn-alarm col-1" type="button">
+          <div class="d-md-none col-7">
+            <form class="search input-group" action="#" method="get">
+              <label hidden id="search">Поле поиска</label>
+              <input class="search-field form-control border-0" type="text" name="search" id="search"
+                area-label="Search term" area-describedby="basic-addon">
+              <div class="input-group-append">
+                <button class="btn" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ced4da" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <button class="btn btn-alarm col-1" type="button" title="New events!" data-toggle="popover"
+            data-placement="bottom" data-content="You've got 3+ notifications!">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ced4da" class="bi bi-bell-fill"
               viewBox="0 0 16 16">
               <path
                 d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
             </svg>
           </button>
-
-          <button class="btn btn-message col-1" type="button">
+          <button class="btn btn-message col-1" type="button" title="New income message" data-toggle="popover"
+            data-placement="bottom" data-content="You've got 7 new messages!">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ced4da" class="bi bi-envelope-fill"
               viewBox="0 0 16 16">
               <path
                 d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
             </svg>
           </button>
-          <div class="col-md-3">
+          <div class="col-1 col-md-3">
             <div class="profile">
-              <a class="text-secondary" href="#" data-text="O">Nix Student</a>
+              <a class="text-secondary d-none d-md-inline-block href=" #" data-text="O">Nix Student</a>
               <img class="user-img rounded-circle" src="img/user-img2.jpg" alt="">
             </div>
           </div>
         </header>
+
         <main class="row p-4">
           <h1 class="col-12 mb-3"><small>Profile</small></h1>
           <div class="col-12 col-md-4 mb-3 card shadow text-center">
@@ -223,6 +249,7 @@
             </form>
           </div>
         </main>
+
         <footer class="row p-3">
           <p class="col-12 text-center">Copyright &copy; Nix Student 2022</p>
         </footer>
@@ -239,14 +266,32 @@
     </div>
   </div>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <!-- Initialize Bootstrap functionality -->
+  <script>
+    // Initialize tooltip component
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
   </script>
 
 </body>
